@@ -14,9 +14,9 @@ public class MyInterceptor implements HandlerInterceptor{
 			throws Exception {
 		System.out.println("This is pre Handle");
 		String s = request.getParameter("query");
-		if(s.contains("r")) {
+		if(s.contains("error")) {
 			response.setContentType("text/html");
-			response.getWriter().print("hello morning!");
+			response.getWriter().print("Error!");
 			return false;
 		}		
 		return true;
